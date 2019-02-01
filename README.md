@@ -1,6 +1,5 @@
-# Personal-Site
-
-My personal website, built with Less, Slim and plenty of Bootstrap to go. Check out the live version [here](https://www.johnzl.com)
+# My Personal Website
+Built with Less, Slim and plenty of Bootstrap to go. Check out the live version [here](https://www.johnzl.com)
 
 ## Dependencies
 * `lessc` - installable through `npm` 
