@@ -1,0 +1,43 @@
+doctype html
+html
+	head
+		meta charset="utf-8" /
+		meta content="width=device-width, initial-scale=1" name="viewport" /
+		/! Bootstrap CSS
+		link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" rel="stylesheet" /
+		/! My CSS
+		link href="resume.css" rel="stylesheet" /
+		link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous"
+		link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i" rel="stylesheet"/
+
+	body
+		/! navbar
+		nav.navbar.navbar-dark.navbar-expand-sm.bg-dark.fixed-top
+			button.navbar-toggler aria-controls="main_nav" aria-expanded="true" aria-label=("Toggle navigation") data-target="#main_nav" data-toggle="collapse" type="button" 
+				span.navbar-toggler-icon
+			#main_nav.collapse.navbar-collapse style="font-size:1.2em;"
+				.navbar-nav.mr-auto
+					a.px-2.nav-item.nav-link href="main.html"  Home
+				.navbar-nav.ml-auto
+					a.px-3.nav-item.nav-link href="experience.html"  Experience
+					a.px-3.nav-item.nav-link href="projects.html"  Projects
+					a.px-3.nav-item.nav-link href="resume.html" Resumé
+					a.px-3.nav-item.nav-link href="contact.html"  Contact
+
+		.container-fluid.text-white.pb-3
+			.row.align-items-center.text-center
+				.col
+					h1.text-uppercase.pb-2 Resumé
+
+		.container-fluid.text-white
+			.row
+				.col
+				.col.align-self-center
+					iframe src="https://resume.creddle.io/embed/283iphvqfzg" width="850" height="1100" seamless
+				.col
+			.row.pt-5
+				.col
+				.col
+					.mt-auto style="text-align:center;"
+						a.btn.btn-primary href="John Long Resumé.pdf" target="_blank" Grab a Copy!
+				.col

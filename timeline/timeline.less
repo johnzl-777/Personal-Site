@@ -1,0 +1,216 @@
+/* Import */
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i|Saira+Extra+Condensed:100,200,300,400,500,600,700,800|Saira:100,200,300,400,500,600,700,800');
+
+/* Variables */
+
+@background: #252827;
+
+@color-primary: #004ffc;
+@color-light: white;
+@color-dim: #6c6d6d;
+@spacing: 40px;
+@radius: 10px;
+
+@date: 200px;
+@dotborder: 4px;
+@dot: 11px;
+@line: 4px;
+
+@font-stack: 'IBM Plex Sans', sans-serif;
+
+/* Base */
+
+body {
+  padding-top: 60px;
+  background: @background;
+  font-size: 16px;
+}
+
+p {
+  font-weight: 300;
+}
+
+h1 {
+ font-family: @font-stack;
+ letter-spacing: 1.5px;
+ color: @color-light;  
+ font-weight: 400;
+ font-size: 2.4em;
+}
+
+#content {
+  margin-top: @spacing;
+  text-align: center;  
+  
+  h1 {
+    font-weight: 700;
+    font-size: 3em;
+    color:transparent;
+    background: #43cea2; 
+    background: -webkit-linear-gradient(to right, #30cfd0, #330867); 
+    background: linear-gradient(to right, #30cfd0, #330867);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  h2{
+    font-size: 3em;
+    position: relative;
+    font-weight: 300;
+    color:transparent;
+    background: #ff9966;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+}
+
+/* Timeline */ 
+
+.timeline {
+  border-left: @line solid @color-primary;
+  border-bottom-right-radius: @radius;
+  border-top-right-radius: @radius; 
+  border-right:1px solid fade(white, 80%);
+  border-top:1px solid fade(white, 80%);
+  border-bottom:1px solid fade(white, 80%);
+  background: fade(@color-light, 3%);
+  color: fade(white, 80%);
+  font-family: @font-stack;  
+  margin:@spacing auto;
+  letter-spacing: 0.5px;   
+  position: relative;
+  line-height: 1.4em; //spacing between lines of text (different "p" tags)
+  font-size: 1.03em;   
+  padding: @spacing;   
+  list-style: none;
+  text-align: left;  
+  font-weight: 100;  
+  max-width: 60%;
+
+  ul
+  {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  h1 {
+   font-family: @font-stack;
+   letter-spacing: 1.5px;
+   font-weight: 100;
+   font-size: 1.4em;
+  }
+  
+  h2, h3 {
+   font-family: @font-stack;
+   letter-spacing: 1.5px;
+   font-weight: 400;
+   font-size: 1.6em;
+   margin-bottom: 10px;
+  }
+
+  h4 {
+    font-family: @font-stack;
+    letter-spacing: 1.1px;
+    font-weight: 600;
+    font-size: 1.1em;
+  }
+  
+  .event {
+    border-bottom: 1px dashed fade(@color-light, 10%);
+    padding-bottom: (@spacing * 0.5);
+    margin-bottom: @spacing;  
+    position: relative;
+
+    &:last-of-type { 
+      padding-bottom: 0;
+      margin-bottom: 0; 
+      border: none;      
+    }
+
+    &:before, &:after {
+      position: absolute;
+      display: inline-block;
+      top: 0;
+    }
+
+    &:before {
+      left: (((@date * 0.6) + @spacing + @line + @dot + (@dotborder * 2)) * 1.5) * -1;    
+      color: fade(@color-light, 40%);    
+      content: attr(data-date);
+      white-space: pre-wrap;
+      text-align: right;
+      font-weight: 100;    
+      font-size: 0.9em;
+      min-width: @date;
+      font-family: @font-stack;
+    }
+
+    &:after {
+      box-shadow: 0 0 0 @dotborder fade(@color-primary,100%);    
+      left: (@spacing + @line + (@dot * 0.35)) * -1;        
+      background: lighten(@background,5%);    
+      border-radius: 50%;  
+      height: @dot;
+      width: @dot;
+      content: "";
+      top: 5px;
+    }
+  }
+
+  .content-skills {
+    font-size: 0.9em;
+    padding: 0;
+    margin-bottom: 0;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    li {
+      border-radius: 25px;
+      background: #40484D;
+      display: inline-block;
+      padding: 3px 5px;
+      color: rgba(255,255,255,0.7);
+      margin: 3px 2px;
+      text-align: center;
+      flex-grow: 1;
+    }
+  }
+}
+
+#intel  
+{
+  border-left: @line solid #0071c5;
+  li::after
+  {
+    box-shadow: 0 0 0 @dotborder #0071c5;
+  }
+}
+
+#caltrans
+{
+  border-left: @line solid #0f9b00;
+  li::after
+  {
+    box-shadow: 0 0 0 @dotborder #0f9b00;
+  }
+}
+
+#uh
+{
+  border-left: @line solid #f2c500;
+  li::after
+  {
+    box-shadow: 0 0 0 @dotborder #f2c500;
+  }
+}
+
+@media (max-width: 800px)
+{
+  .timeline .event:before
+  {
+    content: none;
+  }
+}

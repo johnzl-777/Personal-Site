@@ -1,0 +1,149 @@
+doctype html
+html
+  head
+    meta charset="utf-8" /
+    meta content="width=device-width, initial-scale=1" name="viewport" /
+    /! Bootstrap CSS
+    link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" rel="stylesheet" /
+    /! My CSS
+    link href="projects.css" rel="stylesheet" /
+    link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i" rel="stylesheet"/
+
+  body
+    /! navbar
+    nav.navbar.navbar-dark.navbar-expand-sm.bg-dark.fixed-top
+      button.navbar-toggler aria-controls="main_nav" aria-expanded="true" aria-label=("Toggle navigation") data-target="#main_nav" data-toggle="collapse" type="button" 
+        span.navbar-toggler-icon
+      #main_nav.collapse.navbar-collapse style="font-size:1.2em;"
+        .navbar-nav.mr-auto
+          a.px-2.nav-item.nav-link href="main.html"  Home
+        .navbar-nav.ml-auto
+          a.px-3.nav-item.nav-link href="experience.html"  Experience
+          a.px-3.nav-item.nav-link href="projects.html"  Projects
+          a.px-3.nav-item.nav-link href="resume.html" Resumé
+          a.px-3.nav-item.nav-link href="contact.html"  Contact
+
+    .container-fluid.text-white
+      .row.align-self-center
+        .col
+          h1.text-uppercase.pb-2 Projects
+
+    .container-fluid.text-white
+      .row.align-self-center
+        .col
+          h2.text-uppercase style="text-decoration: underline; text-align:center;" Python
+
+    .container-fluid.text-white
+      .row.justify-content-center.align-self-center
+        .col.my-auto
+
+          .card-deck
+            .card.bg-dark.border-light
+              .card-body
+                  h3.card-title Network Configuration Generator (NCG)
+                  p.card-text Built for Intel Network Engineers and beyond
+              ul.list-group.list-group-flush
+                li.list-group-item.bg-dark.border-light
+                  p.text-uppercase style="font-size:1.1em; font-weight: bold; letter-spacing: 1.1px;" Purpose
+                  ul
+                    li Created for the Intel WAN (Wide Area Network) Group
+                    li Tackle growing security and technical debt burden from pre-existing spreadsheet generation and storage
+                    li Provides single, universally accessible tool for engineering team
+                li.list-group-item.bg-dark.border-light
+                  .mt-auto style="text-align:center;"
+                    a.btn.btn-primary href="https://github.com/johnzl-777/NCG" target="_blank" Repository
+
+            .card.bg-dark.border-light
+              .card-body
+                  h3.card-title TLE Reader
+                  p.card-text Turn Two-Line Elements (TLEs) into Plain Engineering English
+              ul.list-group.list-group-flush
+                li.list-group-item.bg-dark.border-light
+                  p.text-uppercase style="font-size:1.1em; font-weight: bold; letter-spacing: 1.1px;" Purpose
+                  ul
+                    li Created for the Space and Satellite Systems Group
+                    li Alleviate confusion around standardized format for rapid prototyping
+                li.list-group-item.bg-dark.border-light
+                  .mt-auto style="text-align:center;"
+                    a.btn.btn-primary href="https://github.com/johnzl-777/tle_reader" target="_blank" Repository
+
+      .row.pt-5.pb-5
+        .col-6.my-auto
+          .card.bg-dark.border-light
+            .card-body
+                h3.card-title Chrome-Joystick
+                p.card-text An exercise in the lack thereof
+            ul.list-group.list-group-flush
+              li.list-group-item.bg-dark.border-light
+                p.text-uppercase style="font-size:1.1em; font-weight: bold; letter-spacing: 1.1px;" Purpose
+                ul
+                  li Created because scrolling is too much effort
+                  li Used scrap laying around and put it to use
+                  li provides convenient scrolling with the twist of a wrist
+              li.list-group-item.bg-dark.border-light
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="https://github.com/johnzl-777/Chrome-Joystick" target="_blank" Repository
+
+
+
+    .container-fluid.text-white
+      .row.align-self-center
+        .col
+          h2.text-uppercase style="text-decoration: underline; text-align:center;" C/C++
+
+    .container-fluid.text-white
+      .row.justify-content-center.align-self-center
+        .col.my-auto
+
+          .card-deck
+            .card.bg-dark.border-light
+              .card-body
+                  h3.card-title DRAMutils
+                  p.card-text Bridging the gap between legacy and modern hardware
+              ul.list-group.list-group-flush
+                li.list-group-item.bg-dark.border-light
+                  p.text-uppercase style="font-size:1.1em; font-weight: bold; letter-spacing: 1.1px;" Purpose
+                  ul
+                    li Use leftover ceramic DIP DRAM chips for future projects
+                    li Understand DRAM operation by implementing Read/Write/Refresh Protocols
+                    li Test chip latency and storage timing in the simplest possible fashion
+                li.list-group-item.bg-dark.border-light
+                  .mt-auto style="text-align:center;"
+                    a.btn.btn-primary href="https://github.com/johnzl-777/DRAMutils" target="_blank" Repository
+
+            .card.bg-dark.border-light
+              .card-body
+                  h3.card-title SRAM-Read-Write
+                  p.card-text A sketch for the Arduino Mega that allows it to read and write to some older generation SRAM chips
+              ul.list-group.list-group-flush
+                li.list-group-item.bg-dark.border-light
+                  p.text-uppercase style="font-size:1.1em; font-weight: bold; letter-spacing: 1.1px;" Purpose
+                  ul
+                    li Extend Arduino memory capacity through legacy DIP SRAM chips
+                    li Provide simple but fast Read/Write capabilities
+                    li Test and easily diagnose SRAM chip reliability
+                li.list-group-item.bg-dark.border-light
+                  .mt-auto style="text-align:center;"
+                    a.btn.btn-primary href="https://github.com/johnzl-777/SRAM-Read-Write" target="_blank" Repository
+
+      .row.pt-5.pb-5
+        .col-6.my-auto
+          .card.bg-dark.border-light
+            .card-body
+                h3.card-title EPROM-Dumper
+                p.card-text A sketch for the Arduino Mega that allows you to dump the contents of EPROM chips
+            ul.list-group.list-group-flush
+              li.list-group-item.bg-dark.border-light
+                p.text-uppercase style="font-size:1.1em; font-weight: bold; letter-spacing: 1.1px;" Purpose
+                ul
+                  li Extract content of legacy DIP UV EPROMs
+                  li Understand principles of EPROM operation
+                  li Create simplest, smallest possible implementation
+              li.list-group-item.bg-dark.border-light
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="https://github.com/johnzl-777/EPROM-Dumper" target="_blank" Repository
+
+    /! Bootstrap JS dependencies
+    script crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" src="https://code.jquery.com/jquery-3.3.1.min.js" 
+    script crossorigin="anonymous" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" 
+    script crossorigin="anonymous" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" 

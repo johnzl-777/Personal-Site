@@ -1,0 +1,167 @@
+doctype html
+head
+  meta charset="utf-8" /
+  meta content="width=device-width, initial-scale=1" name="viewport" /
+  /! Bootstrap CSS
+  link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" rel="stylesheet" /
+  /! My CSS
+  link href="main.css" rel="stylesheet" /
+  link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,300i,400,400i,700,700i" rel="stylesheet"/
+
+body
+  /! navbar
+  nav.navbar.navbar-dark.navbar-expand-sm.bg-dark.fixed-top
+    button.navbar-toggler aria-controls="main_nav" aria-expanded="true" aria-label=("Toggle navigation") data-target="#main_nav" data-toggle="collapse" type="button" 
+      span.navbar-toggler-icon
+    #main_nav.collapse.navbar-collapse style="font-size:1.2em;"
+      .navbar-nav.mr-auto
+        a.px-2.nav-item.nav-link href="main.html"  Home
+      .navbar-nav.ml-auto
+        a.px-3.nav-item.nav-link href="experience.html"  Experience
+        a.px-3.nav-item.nav-link href="projects.html"  Projects
+        a.px-3.nav-item.nav-link href="resume.html" Resumé
+        a.px-3.nav-item.nav-link href="contact.html"  Contact
+
+  #particles-js
+  #landing-page.container-fluid.text-white.section
+    .h-100.row.align-items-center
+      .col-sm-6
+        img#personal-picture.rounded-circle src="Images/Personal Picture.jpg"
+      .col-sm-6
+        .row.pb-3
+          .col
+            h1.text-uppercase style="font-size:4em"  John Long
+        .row
+          .col
+            h3.text-uppercase Developer.
+        .row
+          .col
+            h3.text-uppercase Polymath.
+        .row
+          .col
+            h3.text-uppercase Mentor.
+        .row
+          .col
+            a.scroll-button href="#who-i-am" 
+              svg
+                g
+                  line x2="227.62" y1="31.28" y2="31.28" 
+                  polyline points=("222.62 25.78 228.12 31.28 222.62 36.78") 
+                  circle cx="224.67" cy="30.94" r="30.5" transform="(rotate(180 224.67 30.94) scale(1), -1) translate(0, -61)" 
+              h3.text-uppercase And More...
+
+  #who-i-am.container-fluid.text-white.section
+    .row.align-self-center
+      .col
+        h1#section-title.text-uppercase style="font-size:4em;"  Who I Am
+    .row.align-self-center
+      .col
+        p style="font-size:1.4em;"  Hi! I'm John Long. I'm a freshman at the University of California, Davis studying Computer Science and Engineering (CSE). I am experienced with Python and C/C++, with a focus on blockchain technology.
+        p style="font-size:1.4em;" Below you'll find some of my projects, with even more <a href="projects.html"> here.</a>
+    .row.justify-content-center.align-self-center
+      .col-xs-12.my-auto
+        .card-deck
+          .card.bg-dark.border-light
+            img.mx-auto.d-block.card-img-top style="width:100px; height:100px;" src="Images/Python.png"
+            .card-body.d-flex.flex-column
+                h3 Network Configuration Generator (NCG)
+                p Generate Cisco network configuration files quickly and securely
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="https://github.com/johnzl-777/NCG" target="_blank" Repository
+          .card.bg-dark.border-light
+            .row
+              .col
+                img.mx-auto.d-block.card-img-top style="width:100px; height:100px;" src="Images/C.svg"
+              .col
+                img.mx-auto.d-block.card-img-top style="width:100px; height:100px;" src="Images/C++.png"
+            .card-body.d-flex.flex-column
+                h3 DRAMutils
+                p For simple Read/Write operations from Arduino to legacy DIP DRAM chips
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="https://github.com/johnzl-777/DRAMutils" target="_blank" Repository
+          .card.bg-dark.border-light
+            img.mx-auto.d-block.card-img-top style="width:100px; height:100px;" src="Images/blockchain.svg"
+            .card-body.d-flex.flex-column
+                h3 Building Your First dApp: A No-Nonsense Guide
+                p A guide to writing your first Ethereum dApp for total beginners
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="https://medium.com/blockchain-at-davis" target="_blank" Article
+
+  #what-i-do.container-fluid.text-white.section style="margin:auto; height:auto;"
+    .row
+      .col
+        h1#section-title.text-uppercase.pb-2 style="font-size:4em;" What I Do
+    .row.justify-content-center
+      .col-xs-12.my-auto
+        .card-deck
+          .card.bg-dark.border-light
+            img.mx-auto.d-block.card-img-top style="width:250px; height:250px;" src="Images/BaD.jpg"
+            .card-body.d-flex.flex-column
+              h4.card-title Blockchain at Davis
+              p.card-text An Organization dedicated to teaching students about building with Blockchain technology.
+            ul.list-group.list-group-flush
+              li.list-group-item.bg-dark.border-light
+                p style="font-size:1.1em; font-weight: bold;" Role
+                p Head Instructor
+              li.list-group-item.bg-dark.border-light
+                p style="font-size:1.1em; font-weight: bold;" Duties
+                p I work one-on-one with UC Davis students to build dApps (Decentralized Applications) and understand the underlying technology of Blockchain, exploring different tools and platforms along the way.
+              .card-body.d-flex.flex-column
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="http://www.blockchainatdavis.com/" target="_blank" Website
+
+          .card.bg-dark.border-light
+            img.mx-auto.d-block.card-img-top style="width:250px; height:250px;" src="Images/SSS.jpg"
+            .card-body.d-flex.flex-column
+              h4.card-title Space and Satellite Systems (SSS)
+              p.card-text A UC Davis club dedicated to building and launching Davis' first Cubesat 
+            ul.list-group.list-group-flush
+              li.list-group-item.bg-dark.border-light
+                p style="font-size:1.1em; font-weight: bold;" Role
+                p Software Developer on behalf of Orbital Propagation Group
+              li.list-group-item.bg-dark.border-light
+                p style="font-size:1.1em; font-weight: bold;" Duties
+                p I help build the Oribtal Propagation software used for Satellite navigation, working with other teams to meet requirements and learn about embedded tech in space.
+              .card-body.d-flex.flex-column
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="https://stem.ucdavis.edu/resources/space-and-satellite-systems-club/" target="_blank" Website
+
+          .card.bg-dark.border-light
+            img.mx-auto.d-block.card-img-top style="width:250px; height:250px;" src="Images/hyperloop-one-logo-design.png"
+            .card-body.d-flex.flex-column
+              h4.card-title OneLoop
+              p A UC Davis club competing in the Hyperloop competition hosted by SpaceX to create the transportation of the future.
+            ul.list-group.list-group-flush
+              li.list-group-item.bg-dark.border-light
+                p style="font-size:1.1em; font-weight: bold;" Role
+                p Software Developer on behalf of Controls Team
+              li.list-group-item.bg-dark.border-light
+                p style="font-size:1.1em; font-weight: bold;" Duties
+                p style="padding-bottom: 1.5em;" I help build the brains of the pod, applying industrial-grade logic and rapid prototyping to ensure a safe and efficient design. 
+              .card-body.d-flex.flex-column
+                .mt-auto style="text-align:center;"
+                  a.btn.btn-primary href="https://aggielife.ucdavis.edu/organization/oneloop" target="_blank" Website
+
+
+
+  /! Bootstrap JS dependencies
+  script crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" src="https://code.jquery.com/jquery-3.3.1.min.js" 
+  script crossorigin="anonymous" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" 
+  script crossorigin="anonymous" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" 
+  /! Particle JS
+  script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js" 
+  javascript:
+    particlesJS("particles-js", {"particles":{"number":{"value":80,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.5,"random":false,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":true,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"repulse"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":40,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+  javascript:
+    $(document).ready(function()
+      {
+       $('a[href*="#"]').on('click', function (e)
+       {
+         e.preventDefault();
+         $('html, body').animate({ scrollTop: $($(this).attr('href')).offset().top }, 700, 'swing');
+       });
+     });
+
+
+
+
