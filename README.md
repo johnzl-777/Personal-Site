@@ -1,5 +1,10 @@
 # My Personal Website
-Built with Less, Slim and plenty of Bootstrap to go. Check out the live version [here](https://www.johnzl.com)
+
+Built with Less, Slim and plenty of Bootstrap to go. 
+
+## DECOMISSIONED 
+
+As of 4/5/2020, this personal is no longer active and serves as a store of older work.
 
 ## Dependencies
 * `lessc` - installable through `npm` 
